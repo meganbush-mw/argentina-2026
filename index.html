@@ -199,7 +199,11 @@
   .spot-note { margin: 0; color: var(--ink-2); font-size: 0.95rem; }
   .spot .details .lbl { min-width: 84px; }
   .links { display: inline-flex; flex-wrap: wrap; gap: 4px 14px; }
-  #recommended { padding-top: 24px; }
+  #recommended { padding-top: 24px; gap: 20px; }
+  .group { font-family: var(--f-sign); font-weight: 600; font-size: 0.95rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); margin: 12px 0 -4px; }
+  .grid.four { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+  @media (min-width: 700px) { .grid.four { grid-template-columns: repeat(2, 1fr); } .grid.three { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .grid.four { grid-template-columns: repeat(4, 1fr); } }
   .local { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
   .local li { font-size: 0.93rem; color: var(--ink-2); }
   .local b { color: var(--ink); font-weight: 600; }
@@ -451,7 +455,43 @@
   <section class="essentials" id="recommended">
     <div class="eyebrow">If you have time</div>
     <h2>Recommended spots</h2>
-    <div class="grid">
+    <h3 class="group">Steps from the hotel</h3>
+    <div class="grid four">
+      <div class="card spot">
+        <span class="tag">Cocktail bar</span>
+        <h3>Florería Atlántico</h3>
+        <ul class="details">
+          <li><span class="lbl">From hotel</span>2 min walk</li>
+          <li><span class="lbl">Links</span><span class="links"><a href="https://www.instagram.com/floreriaatlantico/?hl=en" target="_blank" rel="noopener">Instagram</a></span></li>
+        </ul>
+      </div>
+      <div class="card spot">
+        <span class="tag">Wine bar</span>
+        <h3>ProVinCia Bar de Vinos</h3>
+        <ul class="details">
+          <li><span class="lbl">From hotel</span>Across the street</li>
+          <li><span class="lbl">Links</span><span class="links"><a href="https://www.instagram.com/pro.vin.cia/?hl=en" target="_blank" rel="noopener">Instagram</a></span></li>
+        </ul>
+      </div>
+      <div class="card spot">
+        <span class="tag">Coffee</span>
+        <h3>Shelter Coffee</h3>
+        <ul class="details">
+          <li><span class="lbl">From hotel</span>3 min walk</li>
+          <li><span class="lbl">Links</span><span class="links"><a href="https://www.instagram.com/thesheltercoffee/?hl=es" target="_blank" rel="noopener">Instagram</a></span></li>
+        </ul>
+      </div>
+      <div class="card spot">
+        <span class="tag">Breakfast, brunch, lunch</span>
+        <h3>Farinelli Arroyo</h3>
+        <ul class="details">
+          <li><span class="lbl">From hotel</span>2 min walk</li>
+          <li><span class="lbl">Links</span><span class="links"><a href="https://www.instagram.com/farinelli_ba/?hl=es" target="_blank" rel="noopener">Instagram</a></span></li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="group">Worth the trip</h3>
+    <div class="grid three">
       <div class="card spot">
         <span class="tag">Café</span>
         <h3>Café Tortoni</h3>
@@ -471,10 +511,9 @@
       </div>
       <div class="card spot">
         <span class="tag">Cocktail bar</span>
-        <h3>Florería Atlántico</h3>
+        <h3>Cochinchina</h3>
         <ul class="details">
-          <li><span class="lbl">From hotel</span>2 min walk</li>
-          <li><span class="lbl">Links</span><span class="links"><a href="https://www.instagram.com/floreriaatlantico/?hl=en" target="_blank" rel="noopener">Instagram</a></span></li>
+          <li><span class="lbl">From hotel</span>20 min &middot; Palermo Soho</li>
         </ul>
       </div>
     </div>
